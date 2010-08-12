@@ -22,6 +22,7 @@ module Typedown
 
       # Dialogue dashes
       text.gsub!(/^-\.? /, "&#8213; ")
+      text.gsub!(/\s-\.? /, " &#8213; ")
 
       # Insert placeholders around lead in
       text.gsub!(/^\. (( *[^\n].+\n)*)/, "! x!\\1!x-!\n")
