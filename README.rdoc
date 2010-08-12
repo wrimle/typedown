@@ -25,13 +25,13 @@ A typical typedown document will look like this:
     //. This is a bold paragraph
     that might run through several lines
     before ending in a double line break.
-    The dot ensuers the next word is 
+    The dot ensuers the first word is 
     auto-capitalized.
 
     /. This paragraph is italic.
     
     Single words may be /italic/ or //bold//. Or you 
-    may use standard markdown _italic_ and __bold__
+    may use standard _markdown italic_ and __bold__
     for more flexibility. The slash syntax only
     works for single words and whole words, because
     the slash may have other uses.
