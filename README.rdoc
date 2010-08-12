@@ -1,0 +1,104 @@
+= typedown
+
+* http://github.com/wrimle/typedown
+
+== DESCRIPTION
+
+Typedown is a markdown dialect optimized for fast typing on mobile devices.
+The typedown is basically a preprocessor that translates typedown to markdown,
+for further processing by a markdown parser.
+
+At the moment the typedown syntax is mainly tested with the iPod touch/iPhone iOS 
+4.0.1 keyboard. It takes into account looks at how easy it is to get to important
+characters on the keyboard, as well as features like auto-capitalizing.
+
+A typical typedown document will look like this:
+
+
+    ! Heading
+    
+    Exclamation mark is chosen because the
+    first word after it is auto-capitalized.
+    
+    //. This is a bold paragraph
+    that might run through several lines
+    before ending in a double line break.
+    The dot ensuers the next word is 
+    auto-capitalized.
+
+    Here is some copy. Single words may
+    be /italic/ or //bold//. Or you may use
+    standard markdown _italic_ and __bold__
+    for more flexibility. The slash syntax only
+    works for single words and whole words, because
+    the slash may have other uses.
+    
+    !! Subheading
+    
+    /. This paragraph is italic.
+    
+    As typedown is a preprocessor, one is free
+    to use standard markdown. There is one exception
+    though. The dash will no longer create
+    bullet-lists.
+    
+    - Why? you ask.
+    
+    - It is used for dialogue instead.
+    
+    - Why?
+    
+    - I want typedown to be a tool for journalists and writers. 
+    In some countries, including mine, this is a usual style for 
+    writing dialogue both in newspapers, magazines and fiction.
+
+    - Ah! you say. - I get it.
+
+    That rounds it up.
+
+       
+== FEATURES/PROBLEMS:
+
+The preprocessor at present is not aware of CODE
+blocks or similar, and will not leave your regexps
+alone.
+
+== REQUIREMENTS:
+
+Typedown is presently using bluecloth as its markdown
+parser.
+
+== SYNOPSIS:
+
+require 'typedown'
+
+doc = Typedown::Document.new content
+doc << "! More content\n"
+puts doc.to_markdown
+puts doc.to_html
+
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 Rune Myrland
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
