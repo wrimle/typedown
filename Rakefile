@@ -13,7 +13,7 @@ Hoe.plugin :newgem
 $hoe = Hoe.spec 'typedown' do
   self.developer 'Rune Myrland', 'rune@epubify.com'
   self.rubyforge_name       = self.name # TODO this is default value
-  # self.extra_deps         = [['activesupport','>= 2.0.2']]
+  self.extra_deps         = [['bluecloth','>= 2.0.7']]
 
 end
 
