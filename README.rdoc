@@ -18,7 +18,9 @@ A typical typedown document will look like this:
     ! Heading
     
     Exclamation mark is chosen because the
-    first word after it is auto-capitalized.
+    first word after it is auto-capitalized. And
+    it is easier to get to than the hash (#) in the 
+    iPhone/iPod touch keyboard layout.
     
     //. This is a bold paragraph
     that might run through several lines
@@ -26,16 +28,15 @@ A typical typedown document will look like this:
     The dot ensuers the next word is 
     auto-capitalized.
 
-    Here is some copy. Single words may
-    be /italic/ or //bold//. Or you may use
-    standard markdown _italic_ and __bold__
+    /. This paragraph is italic.
+    
+    Single words may be /italic/ or //bold//. Or you 
+    may use standard markdown _italic_ and __bold__
     for more flexibility. The slash syntax only
     works for single words and whole words, because
     the slash may have other uses.
     
     !! Subheading
-    
-    /. This paragraph is italic.
     
     As typedown is a preprocessor, one is free
     to use standard markdown. There is one exception
@@ -54,7 +55,20 @@ A typical typedown document will look like this:
 
     - Ah! you say. - I get it.
 
-    That rounds it up.
+    The dash does not auto-capitalize, though. Because of this
+    there is an alternative syntax:
+
+    -. You may add dialuge like this.
+
+    -. That dot is ugly.
+
+    -. Yeah, I agree. But this actually is faster to type. Saves a lot of shifting.
+
+    -. On the iPod again, I guess.
+
+    -. How did you know? I ask.
+
+    You grin.
 
        
 == FEATURES/PROBLEMS:
