@@ -84,12 +84,12 @@ parser.
 
 == SYNOPSIS:
 
-require 'typedown'
+    require 'typedown'
 
-doc = Typedown::Document.new content
-doc << "! More content\n"
-puts doc.to_markdown
-puts doc.to_html
+    doc = Typedown::Document.new content
+    doc << "! More content\n"
+    puts doc.to_markdown
+    puts doc.to_html
 
 
 == LICENSE:
