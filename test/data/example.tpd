@@ -1,0 +1,21 @@
+! Heading
+
+//. A lead-in saying what the article is about.
+Some more lead-in. 
+And more.
+
+Some body copy.
+
+!! Subheading
+
+More body copy.
+
+- Dialogue like this, he said.
+
+- Oh, yeah?
+
+More body copy. Standard markdown /italic/ and //bold//.
+
+!! Another subheading
+
+And body copy again.

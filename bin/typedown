@@ -1,0 +1,75 @@
+#!/usr/bin/ruby
+#
+# = newsdown
+#
+# Format one or more text files with the newsdown formatter.
+# Typedown is a dialect of markdown optimized for typing on mobile devices.
+#
+# = Synopsis
+#
+#   newsdown [OPTIONS] [FILES]
+#
+# 
+#
+
+$: << "lib"
+require 'typedown'
+require 'optparse'
+
+
+DocumentWrapper = %{
+<html>
+  <head><title>%s</title></head>
+  <body>
+%s
+  </body>
+</html>
+}
+
+def main
+  fragment = false
+
+  ARGV.options do |oparser|
+    oparser.banner = "Usage: #$0 [OPTIONS] FILES"
+
+    # Debug mode
+    oparser.on( "--debug", "-d", TrueClass, "Turn debugging output on" ) {
+      $DEBUG = true
+    }
+
+    # 'Fragment' mode
+    oparser.on( "--fragment", "-f", TrueClass,
+                "Output HTML fragments instead of whole documents" ) {
+      fragment = true
+    }
+
+    oparser.parse!
+  end
+
+  # Filter mode if no arguments
+  ARGV.push( "-" ) if ARGV.empty?
+
+  ARGV.each {|file|
+    if file == '-'
+      contents = $stdin.read
+    else
+      contents = File::read( file )
+    end
+
+    nd = Typedown::Document.new( contents )
+    $stderr.puts "Using Typedown version #{Typedown::VERSION}"
+
+    if fragment
+      $stdout.puts nd.to_html
+    else
+      $stdout.puts DocumentWrapper % [ file, nd.to_html ]
+    end
+  }
+
+rescue => err
+  $stderr.puts "Aborting: Fatal error: %s" % err.message
+  exit 255
+end
+
+
+main
