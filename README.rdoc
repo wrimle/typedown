@@ -58,7 +58,7 @@ A typical typedown document will look like this:
     The dash does not auto-capitalize, though. Because of this
     there is an alternative syntax:
 
-    -. You may add dialuge like this.
+    -. You may add dialogue like this.
 
     -. That dot is ugly.
 
