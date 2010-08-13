@@ -4,22 +4,21 @@ require 'hoe'
 require 'fileutils'
 require './lib/typedown'
 
-Hoe.plugin :newgem
-# Hoe.plugin :website
-# Hoe.plugin :cucumberfeatures
 
-# Generate all the Rake tasks
-# Run 'rake -T' to see list of generated tasks (from gem root directory)
-$hoe = Hoe.spec 'typedown' do
-  self.developer 'Rune Myrland', 'rune@epubify.com'
-  self.rubyforge_name       = self.name # TODO this is default value
-  self.extra_deps         = [['bluecloth','>= 2.0.7']]
-
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "typedown"
+    gem.summary = %Q{A markdown dialect optimized for fast typing on mobile devices}
+    gem.description = %Q{Typedown is a markdown preprocessor which forwards it's output to a markdown parser. Presently bluecloth}
+    gem.email = "rmyrland@gmail.com"
+    gem.homepage = "http://github.com/wrimle/typedown"
+    gem.authors = ["wrimle"]
+    gem.add_dependency('bluecloth','>= 2.0.7')
+    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
-require 'newgem/tasks'
-Dir['tasks/**/*.rake'].each { |t| load t }
-
-# TODO - want other tests/tasks run by default? Add them to the list
-# remove_task :default
-# task :default => [:spec, :features]
