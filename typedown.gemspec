@@ -31,7 +31,8 @@ Gem::Specification.new do |s|
      "script/generate",
      "test/data/example.tpd",
      "test/test_helper.rb",
-     "test/test_typedown.rb"
+     "test/test_typedown.rb",
+     "typedown.gemspec"
   ]
   s.homepage = %q{http://github.com/wrimle/typedown}
   s.rdoc_options = ["--charset=UTF-8"]
