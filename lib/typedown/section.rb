@@ -20,7 +20,7 @@ module Typedown
     end
 
     def body
-      b = @body
+      b = Document.new @body
       b << "\n\n"
       subsections.each do |s|
         b << s.doc
@@ -29,7 +29,7 @@ module Typedown
     end
 
     def doc
-      d = "! #{title}\n\n"
+      d = Document.new "! #{title}\n\n"
       d << body.gsub(/^(!+ )/, '!\0')
       d
     end
