@@ -14,13 +14,13 @@ class TestSection < Test::Unit::TestCase
     end
   end
 
-  should "reassemble doc with no exceptions" do
+  should "reassemble doc with no exceptions using new" do
     assert_nothing_raised do
       s = Typedown::Section.new "Mail subject", @doc
     end
   end
 
-  should "reassemble doc with no exceptions" do
+  should "reassemble doc with no exceptions using self.sectionize" do
     assert_nothing_raised do
       s = Typedown::Section.sectionize @doc, "Mail subject"
       puts "\n\n", s.doc
