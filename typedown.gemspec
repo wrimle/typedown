@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{typedown}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["wrimle"]
@@ -26,12 +26,14 @@ Gem::Specification.new do |s|
      "bin/typedown",
      "lib/typedown.rb",
      "lib/typedown/document.rb",
+     "lib/typedown/section.rb",
      "script/console",
      "script/destroy",
      "script/generate",
      "test/data/example.tpd",
-     "test/test_helper.rb",
-     "test/test_typedown.rb",
+     "test/helper.rb",
+     "test/test_document.rb",
+     "test/test_section.rb",
      "typedown.gemspec"
   ]
   s.homepage = %q{http://github.com/wrimle/typedown}
@@ -40,8 +42,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A markdown dialect optimized for fast typing on mobile devices}
   s.test_files = [
-    "test/test_helper.rb",
-     "test/test_typedown.rb"
+    "test/test_document.rb",
+     "test/helper.rb",
+     "test/test_section.rb"
   ]
 
   if s.respond_to? :specification_version then
