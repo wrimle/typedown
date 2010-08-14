@@ -1,6 +1,4 @@
 require 'rubygems'
-gem 'hoe', '>= 2.1.0'
-require 'hoe'
 require 'fileutils'
 require './lib/typedown'
 
