@@ -92,6 +92,24 @@ parser.
     puts doc.to_html
 
 
+Section.sectionize might be nice for extracting headlines
+or TOCs. 
+
+    require 'typedown'
+
+    root = Typedown::Section.sectionize content
+    puts root.title
+    puts root.body.to_markdown
+
+    root.subsections.each do |s|
+        puts root.title
+        s.subsections.each do |t|
+            puts s.title
+            # puts s.body.to_markdown
+            # puts s.body.to_html
+        end
+    end
+
 == LICENSE:
 
 (The MIT License)
