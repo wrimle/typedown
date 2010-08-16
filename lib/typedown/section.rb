@@ -1,5 +1,4 @@
 
-
 module Typedown
   class Section < String
     def initialize title, body
@@ -16,11 +15,11 @@ module Typedown
     end
 
     def title
-      @title
+      @title || ""
     end
 
     def body
-      b = Document.new @body
+      b = Document.new(@body || "")
       b << "\n\n"
       subsections.each do |s|
         b << s.doc
@@ -35,7 +34,7 @@ module Typedown
     end
 
     def subsections
-      @sections
+      @sections || []
     end
 
     def self.sectionize body, title = nil
@@ -63,7 +62,7 @@ module Typedown
         end
       end
 
-      [ body.strip, sections ]
+      [ body, sections ]
     end
   end
 end
