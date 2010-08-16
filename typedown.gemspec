@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["wrimle"]
-  s.date = %q{2010-08-13}
+  s.date = %q{2010-08-16}
   s.default_executable = %q{typedown}
   s.description = %q{Typedown is a markdown preprocessor which forwards it's output to a markdown parser. Presently bluecloth}
   s.email = %q{rmyrland@gmail.com}
