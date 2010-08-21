@@ -11,7 +11,7 @@ module Typedown
     end
 
     def dummy?
-      (title.empty?) && @body.empty? && subsections.length == 1
+      (title.empty?) && (!@body || @body.empty?) && subsections.length == 1
     end
 
     def title
@@ -39,26 +39,24 @@ module Typedown
 
     def self.sectionize body, title = nil
       s = nil
-      if title
-        s = Section.new title, body
-      else
-        s = Section.new "", body
-        s.dummy? ? s.subsections[0] : s
-      end
+      s = Section.new title || "", body || ""
+      s.dummy? ? s.subsections[0] : s
     end
 
     private
 
     def sectionize v
+      return if v == nil || v.strip.empty?
+
       body, rest = v.split(/^! /, 2)
       sections = []
 
       if rest
         rest.strip.split(/^! /).each do |s|
           title, rest = s.split(/$/, 2)
-          rest.gsub!(/^!(!+ )/, "\\1")
+          rest.gsub!(/^!(!+ )/, "\\1") if rest
 
-          sections << Section.new(title.strip, rest)
+          sections << Section.new(title || "", rest || "")
         end
       end
 
