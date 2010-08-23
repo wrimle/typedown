@@ -11,7 +11,7 @@ module Typedown
     end
 
     def dummy?
-      (title.empty?) && (!@body || @body.empty?) && subsections.length == 1
+      (title.strip.empty?) && (!@body || @body.strip.empty?) && subsections.length == 1
     end
 
     def title
