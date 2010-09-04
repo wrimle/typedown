@@ -7,7 +7,6 @@ module Typedown
       @sections = []
       if body
         @body, @sections = sectionize(Shorthand.process(body))
-        puts body
       end
     end
 
