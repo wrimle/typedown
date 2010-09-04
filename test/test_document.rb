@@ -10,7 +10,8 @@ class TestDocument < Test::Unit::TestCase
 
   should "parse with no exceptions" do
     assert_nothing_raised do
-      Typedown::Document.new @doc
+      td = Typedown::Document.new @doc
+      puts td.to_html
     end
   end
 end
