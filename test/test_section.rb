@@ -2,7 +2,7 @@ require 'helper'
 
 class TestSection < Test::Unit::TestCase
   def setup
-    @doc = File.read("test/data/example.tpd")
+    @doc = File.read("test/data/example3.tpd")
   end
 
   def teardown
@@ -23,7 +23,7 @@ class TestSection < Test::Unit::TestCase
   should "reassemble doc with no exceptions using self.sectionize" do
     assert_nothing_raised do
       s = Typedown::Section.sectionize @doc, "Mail subject"
-      puts "\n\n", s.doc
+      #puts "\n\n", s.doc
     end
   end
 end

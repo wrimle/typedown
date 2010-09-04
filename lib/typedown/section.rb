@@ -6,12 +6,13 @@ module Typedown
       @body = ""
       @sections = []
       if body
-        @body, @sections = sectionize(body) 
+        @body, @sections = sectionize(Shorthand.process(body))
+        puts body
       end
     end
 
     def dummy?
-      (title.strip.empty?) && (!@body || @body.strip.empty?) && subsections.length == 1
+      subsections.length == 1 && (title.strip.empty? || title.tr("!","").strip == subsections[0].title.tr("!","").strip) && (!@body || @body.strip.empty?)
     end
 
     def title
