@@ -70,6 +70,23 @@ A typical typedown document will look like this:
 
     You grin.
 
+
+    !! Link
+
+    The bracket is not very accessible on mobile keyboards.
+    You can create links in textile fashion instead.
+
+    "Textile inspired links":http://example.com/
+
+
+    !! Image
+
+    And you can use the following cross between textile and
+    markdown syntax for images. Typedown will produce an image
+    caption under the image instead of an alt tag.
+
+    !"Image caption":http://example.com/image.jpg    
+
        
 == FEATURES/PROBLEMS:
 
