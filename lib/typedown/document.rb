@@ -38,6 +38,11 @@ module Typedown
       text.gsub!(/^! x!\s*/, "**")
       text.gsub!(/\s*!x-!$/, "**")
 
+      # Textile links to markdown links
+      text.gsub!(/\"(.+)"\:(\S+[\w\d\/])/, "[\\1](\\2)")
+
+      # Typedown image tag
+      text.gsub!(/!\[(.+)\]\((.+)\)/, "<div class='image'><img src='\\2' /><div class='caption'>\\1</div></div>")
 
       # Insert placeholders around lead in
       text.gsub!(/^\/\. (( *[^\n].+\n)*)/, "! x!\\1!x-!\n")

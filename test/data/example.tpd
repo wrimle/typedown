@@ -19,3 +19,10 @@ More body copy. Standard markdown /italic/ and //bold//.
 !! Another subheading
 
 And body copy again.
+
+
+"Textile link":http://www.vg.no.
+
+
+!"Caption":http://www.vg.no/image.jpg
+
