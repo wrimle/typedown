@@ -39,7 +39,7 @@ module Typedown
       text.gsub!(/\s*!x-!$/, "**")
 
       # Textile links to markdown links
-      text.gsub!(/\"(.+)"\:(\S+[\w\d\/])/, "[\\1](\\2)")
+      text.gsub!(/\"([^\"]+)"\:(\S+[\w\d\/])/, "[\\1](\\2)")
 
       # Typedown image tag
       text.gsub!(/!\[(.+)\]\((.+)\)/, "<div class='image'><img src='\\2' /><div class='caption'>\\1</div></div>")

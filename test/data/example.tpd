@@ -21,7 +21,8 @@ More body copy. Standard markdown /italic/ and //bold//.
 And body copy again.
 
 
-"Textile link":http://www.vg.no.
+"Textile link":http://www.vg.no og "en til 
+på samme linje":http://www.db.no.
 
 
 !"Caption":http://www.vg.no/image.jpg
