@@ -30,7 +30,7 @@ module Typedown
 
     def doc
       d = Document.new "! #{title}\n\n"
-      raise d.encoding.name + "/" + body.validencoding
+      #raise d.encoding.name + "/" + body.valid_encoding?
       d << body.gsub(/^(!+ )/, '!\0')
       d
     end
