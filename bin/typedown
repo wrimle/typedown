@@ -57,7 +57,6 @@ def main
     end
 
     nd = Typedown::Document.new( contents )
-    $stderr.puts "Using Typedown version #{Typedown::VERSION}"
 
     if fragment
       $stdout.puts nd.to_html
