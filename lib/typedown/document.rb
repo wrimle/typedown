@@ -80,15 +80,15 @@ module Typedown
       text.gsub!(/\s*!x-!$/, "*")
 
 
-      # Insert placeholders around lead in
-      text.gsub!(/^\/\/\. (( *[^\n].+\n)*)/, "! x!\\1!x-!\n")
+      # Insert placeholders around lead in / bold paragraph
+      text.gsub!(/^\/\/\. (( *[^\n].*\n)*)/, "! x!\\1!x-!\n")
       # Remove placeholders while using them to remove whitespace
       text.gsub!(/^! x!\s*/, "*")
       text.gsub!(/\s*!x-!$/, "*")
 
 
-      # Insert placeholders around lead in
-      text.gsub!(/^\/\. (( *[^\n].+\n)*)/, "! x!\\1!x-!\n")
+      # Insert placeholders around italicized paragraph
+      text.gsub!(/^\/\. (( *[^\n].*\n)*)/, "! x!\\1!x-!\n")
       # Remove placeholders while using them to remove whitespace
       text.gsub!(/^! x!\s*/, "_")
       text.gsub!(/\s*!x-!$/, "_")
