@@ -4,15 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{typedown}
-  s.version = "0.0.13"
+  s.name = "typedown"
+  s.version = "0.0.14"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["wrimle"]
-  s.date = %q{2011-05-10}
-  s.default_executable = %q{typedown}
-  s.description = %q{Typedown is a markdown preprocessor which forwards it's output to a markdown parser. Presently bluecloth}
-  s.email = %q{rmyrland@gmail.com}
+  s.date = "2011-10-03"
+  s.description = "Typedown is a markdown preprocessor which forwards it's output to a markdown parser. Presently bluecloth"
+  s.email = "rmyrland@gmail.com"
   s.executables = ["typedown"]
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -38,10 +37,10 @@ Gem::Specification.new do |s|
     "test/test_section.rb",
     "typedown.gemspec"
   ]
-  s.homepage = %q{http://github.com/wrimle/typedown}
+  s.homepage = "http://github.com/wrimle/typedown"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{A markdown dialect optimized for fast typing on mobile devices}
+  s.rubygems_version = "1.8.10"
+  s.summary = "A markdown dialect optimized for fast typing on mobile devices"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
