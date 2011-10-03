@@ -18,8 +18,13 @@ require 'optparse'
 
 
 DocumentWrapper = %{
+<!DOCTYPE html>
+
 <html>
-  <head><title>%s</title></head>
+  <head>
+    <title>%s</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    <meta charset="utf-8">
+  </head>
   <body>
 %s
   </body>
